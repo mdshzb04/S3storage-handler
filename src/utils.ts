@@ -9,6 +9,8 @@ export function buildProject(id: string): Promise<boolean> {
             console.log(`skip: project directory not found at ${projectDir}`);
             resolve(false);
             return;
+
+            
         }
         const child = exec(`cd ${projectDir} && npm install --yes && npm run -s build`)
 
